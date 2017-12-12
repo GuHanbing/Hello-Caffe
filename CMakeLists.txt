@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.9)
+#SET(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g -ggdb")
+#SET(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -Wall")
+project( caffeTest )
+find_package( OpenCV REQUIRED )
+add_executable( caffeTest main.cpp )
+target_link_libraries( caffeTest  ${OpenCV_LIBS} )
